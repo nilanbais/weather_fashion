@@ -19,3 +19,7 @@ Het advies was:
 - te koud
 ```
 (ooit) Het is ook mogelijk om de opzet van het advies aan te passen. Ook geven we u de vrijheid om een voorkeurstijd in te stellen voor het ontvangen van het advies. Daarbij bestaat er ook een optie dat u de app een wekker laat detecteren en het adviesmoment laat afhangen van de wekker die door u is ingesteld.
+
+#### Alternatief
+Een alternatieve manier van distribueren kan als volgt zijn.
+De gebruiker komt op de webapp en logt in. Op het inlogscherm van de gebruiker kan hij/zij een widget importeren die op de telefoon wordt geïnstalleerd. De reden is dat er in de source van de widget ergens de user_id moet terugkomen, zodat deze gebruikt kan worden in het ophalen van het advies en het updaten van het gepersonaliseerde advies.
