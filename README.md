@@ -4,7 +4,7 @@
 Dit stuk doelt op een uiteenzetting van de wensen/ideeën die wij hebben bij het eindproduct. Binnen deze wensen/ideeën wordt er onderschijt gemaakt tussen een uiteindelijke uitbreiding en een aspect wat écht in de eerste versie van het product moet zitten. Wanneer het niet in het eerste product wordt opgenomen, wordt dit aangegeven door het vermelden van `(ooit)` bij het desbetreffende punt.
 
 
-Het eindproduct moet het bolgende probleem oplossen:
+Het eindproduct moet het volgende probleem oplossen:
 ```
 Je stapt je bed uit en kleed je aan. Alles verloopt lekker die ochtend, tot je je opeens beseft dat je je te koud of te warm hebt aangekleed.
 ```
