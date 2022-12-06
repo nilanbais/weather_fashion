@@ -23,3 +23,29 @@ Het advies was:
 #### Alternatief
 Een alternatieve manier van distribueren kan als volgt zijn.
 De gebruiker komt op de webapp en logt in. Op het inlogscherm van de gebruiker kan hij/zij een widget importeren die op de telefoon wordt geïnstalleerd. De reden is dat er in de source van de widget ergens de user_id moet terugkomen, zodat deze gebruikt kan worden in het ophalen van het advies en het updaten van het gepersonaliseerde advies.
+
+
+## Software Architectuur
+De architectuur van de webapp volgt de prioncipes van het MVC (Model-View-Controller) patroon en het N-Tier patroon. Beide introduceren een opsplitsing van verschillende hoofdgroepen binnen de software; het frontend framework, de backend server, en de logica die zorgt voor een koppeling tussen front- en backend.
+
+De software is in deze software opgedeeld in de volgende lagen:
+- Data Access, bestaande uit
+    - Database logic/implementation
+    - Data Service
+- Application Logic
+- User Interface (UI)
+
+### Data Access laag
+De laag van de Data Access is eigenlijk een samenstelling van twee lagen; de laag met de database logica en de Data Service laag. 
+Deze opdeling is geïntroduceert zodat de implementatie van de database en de handelingen/interacties die gedaan moeten worden met de database (data service laag), worden opgesplitst. Er wordt ingeschat/verwacht dat dit de onderhoudbaarheid en adaptiviteit van de data access laag moet vergroten.
+
+### Application Logic laag
+De Application Logic laag is te zien als een equivalent van de Controller uit het MVC patroon of een API (Application Programmable Interface). De hoofdfocus van deze laag is het "vertalen" van clicks, verkregen van de UI, naar acties (requests) voor het ophalen/wegschrijven/aanpassen van data in de data access laag.
+
+### User Interface laag
+De User Interface laag is de laag die wordt gepresenteerd aan de eindgebruiker. Dit is de laag waar clicks en andere vormen van interactie worden geïnterpreteerd en eenmaal geinitieerd, worden gekoppeld aan functionaliteit van de Application Logic laag.
+
+## Software Stack
+De software Stack die wordt toegepast in dit project is de MERN stack, met een deployment op Heroku. 
+
+Mits niet mogelijk in de eerder benoemde stack, wordt er nog een techniek toegepast voor het triggeren van een workflow voor het dagelijks genereren van een advies. De kans is groot dat dit wordt gerealiseerd a.h.v. github actions. Hoe dit uiteindelijk vorm gaat krijgen, wordt in een later stadium opnieuw grondig bekeken.
