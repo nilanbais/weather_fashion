@@ -26,7 +26,7 @@ Dit document bevat de software requirements van de op te leveren applicatie.
 ## Aannames en afhankelijkheden
 
 
-## Feature en Requirements
+## Features en Requirements
 
 ### Functional Requirements
 
