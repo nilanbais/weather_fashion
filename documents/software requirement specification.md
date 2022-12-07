@@ -45,7 +45,8 @@ Een browser.
 ## Aannames en afhankelijkheden
 Er wordt uitgegaan van de mogelijkheid cashe te gebruiken voor het gepersonaliseerde advies.
 
-Ook wordt ervan uit gegaan dat er een gemakkelijke manier is voor het dagelijk ophalen van de weersverwachtingen en het wegzetten van deze info in de database. 
+Ook wordt ervan uit gegaan dat er een gemakkelijke manier is voor het dagelijk ophalen van de weersverwachtingen en het wegzetten van deze info in de database.
+
 
 ## Features en Requirements
 
