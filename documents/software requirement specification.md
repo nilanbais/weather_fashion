@@ -17,8 +17,10 @@ De software wordt eerste instantie aangeboden als web applicatie (webapp). Wanne
 
 Daarbij komt de mogelijkheid van het geven van feedback op het genoten advies. Die wordt gedaan met de volgende opties:
 - was lijp warm.
-- was koud koud.
+- was piecie warm.
 - niets te klagen neef.
+- was piecie koud.
+- was koud koud.
 
 ## Scope
 De webapp geeft in eerste instantie een drievoud aan adviezen, namelijk voor mensen die:
@@ -43,7 +45,7 @@ Een browser.
 ## Aannames en afhankelijkheden
 Er wordt uitgegaan van de mogelijkheid cashe te gebruiken voor het gepersonaliseerde advies.
 
-Ook wordt ervan uit gegaan dat er een gemakkelijke manier is voor het dagelijk ophalen van de weersverwachtingen en het wegzetten van deze info in de database.
+Ook wordt ervan uit gegaan dat er een gemakkelijke manier is voor het dagelijk ophalen van de weersverwachtingen en het wegzetten van deze info in de database. 
 
 ## Features en Requirements
 
