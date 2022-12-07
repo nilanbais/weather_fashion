@@ -43,6 +43,8 @@ Als cache geheugen ingezet kan worden om dit te bereiken, dan heeft dat de voork
 Een browser.
 
 ## Aannames en afhankelijkheden
+De webapp wordt gebouwd met de MERN stack en de n-tier architecture pattern.
+
 Er wordt uitgegaan van de mogelijkheid cashe te gebruiken voor het gepersonaliseerde advies.
 
 Ook wordt ervan uit gegaan dat er een gemakkelijke manier is voor het dagelijk ophalen van de weersverwachtingen en het wegzetten van deze info in de database.
