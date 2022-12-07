@@ -20,6 +20,19 @@ Het advies was:
 ```
 (ooit) Het is ook mogelijk om de opzet van het advies aan te passen. Ook geven we u de vrijheid om een voorkeurstijd in te stellen voor het ontvangen van het advies. Daarbij bestaat er ook een optie dat u de app een wekker laat detecteren en het adviesmoment laat afhangen van de wekker die door u is ingesteld.
 
+Variabelen die benodigd zijn om een fashionadvies te realiseren.
+-Temperatuur
+-Windkracht
+-Luchtvochtigheid
+-Koudescore user
+
+Met deze variabelen kan de gevoelstemperatuur berekend worden. Hiervan zijn al meerdere formules van. Hier een voorbeeld:
+De formule voor de gevoelstemperatuur (G) op basis van JAG/TI-methode luidt: **G= 13.12 + 0.6215T - 13,96W (macht 0,16) + 0.4867TW (macht0,16)**
+
+met temperatuur T in °C op 1,50 meter hoogte en gemiddelde windsnelheid W in de afgelopen tien minuten in m/s op 10 meter hoogte (conform de internationale afspraken voor de meting van luchttemperatuur en windsnelheid). De windsnelheid wordt met de machtsfunctie (^0,16) herleid van de windmeting op 10 meter hoogte naar de wind op 1,50 meter hoogte. In de formule moet de koudescore verwerkt zien te worden. Vannuit daaruit kan een advies worden uitgedragen.
+
+Ook zal er rekening(toekomst) gehouden moeten worden met hoe lang de persoon van plan is buiten zijn casa te verblijven.
+
 #### Alternatief
 Een alternatieve manier van distribueren kan als volgt zijn.
 De gebruiker komt op de webapp en logt in. Op het inlogscherm van de gebruiker kan hij/zij een widget importeren die op de telefoon wordt geïnstalleerd. De reden is dat er in de source van de widget ergens de user_id moet terugkomen, zodat deze gebruikt kan worden in het ophalen van het advies en het updaten van het gepersonaliseerde advies.
