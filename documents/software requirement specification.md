@@ -64,6 +64,7 @@ Hier volgt een lijst met benodigdheden:
     -   plek waar het advies wordt gepresenteerd
     -   mogelijkheid om te registreren/inloggen (wss mogelijkheid om door te klikken naar window voor dit)
 -   gebruik kunnen maken van cookies
+-   mogelijkheid voor het geven van feedback wanneer KS van de gebruiker in de database staat
 
 
 ### Externe Interface Requirements
