@@ -58,6 +58,7 @@ Hier volgt een lijst met benodigdheden:
 -   een connectie met een weersbericht api waarbij minimaal temperatuur en windkracht op te vragen zijn
 -   een frontend framework met de volgende aspecten:
     -   een titel
+    -   een uitleg van gebruik van de webapp
     -   optie om één van 5 standaard KS waarden in te stellen voor direct gebruik
     -   optie om KS waarde in te stellen via slider
     -   plek waar weersverwachting wordt gepresenteerd
