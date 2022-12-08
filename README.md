@@ -31,10 +31,16 @@ Met deze variabelen kan de gevoelstemperatuur berekend worden. Hiervan zijn al m
 ```
 De formule voor de gevoelstemperatuur (G) op basis van JAG/TI-methode luidt: 
 
-G = 13.12 + 0.6215T - 13,96W (macht 0,16) + 0.4867TW (macht 0,16)
-```
+G = 13.12 + 0.6215T - (13,96 + 0.4867T)W^0,16
 
-met temperatuur T in °C op 1,50 meter hoogte en gemiddelde windsnelheid W in de afgelopen tien minuten in m/s op 10 meter hoogte (conform de internationale afspraken voor de meting van luchttemperatuur en windsnelheid). De windsnelheid wordt met de machtsfunctie (^0,16) herleid van de windmeting op 10 meter hoogte naar de wind op 1,50 meter hoogte. In de formule moet de koudescore verwerkt zien te worden. Vannuit daaruit kan een advies worden uitgedragen.
+met:
+- temperatuur T in °C op 1,50 meter hoogte
+- gemiddelde windsnelheid W in de afgelopen tien minuten in m/s op 10 meter hoogte (conform de internationale afspraken voor de meting van luchttemperatuur en windsnelheid). 
+
+De windsnelheid wordt met de machtsfunctie (^0,16) herleid van de windmeting op 10 meter hoogte naar de wind op 1,50 meter hoogte. 
+
+In de formule moet de koudescore verwerkt zien te worden. Vannuit daaruit kan een advies worden uitgedragen.
+```
 
 Ook zal er rekening(toekomst) gehouden moeten worden met hoe lang de persoon van plan is buiten zijn casa te verblijven.
 
