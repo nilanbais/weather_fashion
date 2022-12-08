@@ -53,6 +53,18 @@ Ook wordt ervan uit gegaan dat er een gemakkelijke manier is voor het dagelijk o
 ## Features en Requirements
 
 ### Functional Requirements
+Hier volgt een lijst met benodigdheden:
+-   een database gevuld met advies per temperatuurscategorie (afronden volgens: 4.5 t/m 5.4 => 5) (voor nu doen voor T>=5 tot T<=20)
+-   een connectie met een weersbericht api waarbij minimaal temperatuur en windkracht op te vragen zijn
+-   een frontend framework met de volgende aspecten:
+    -   een titel
+    -   optie om één van 5 standaard KS waarden in te stellen voor direct gebruik
+    -   optie om KS waarde in te stellen via slider
+    -   plek waar weersverwachting wordt gepresenteerd
+    -   plek waar het advies wordt gepresenteerd
+    -   mogelijkheid om te registreren/inloggen (wss mogelijkheid om door te klikken naar window voor dit)
+-   gebruik kunnen maken van cookies
+
 
 ### Externe Interface Requirements
 
