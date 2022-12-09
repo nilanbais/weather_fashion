@@ -49,6 +49,39 @@ Er wordt uitgegaan van de mogelijkheid cashe te gebruiken voor het gepersonalise
 
 Ook wordt ervan uit gegaan dat er een gemakkelijke manier is voor het dagelijk ophalen van de weersverwachtingen en het wegzetten van deze info in de database.
 
+## User story
+Hier wordt de user story voor de webapp omschreven. Hierin wordt onderscheid gemaakt tussen de user stories van een eindgebruiker die de app voor een eerste keer gebruikt en een terugkerende eindgebruiker.
+
+### User story; De nieuwe eindgebruiker
+Om de app te gebruiken, navigeert de user in zijn/haar browser naar de desbetreffende URL waar de app beschikbaar is.
+
+Bij "binnenkomst" wordt de homepage gepresenteerd. Deze homepage is gelijkertijd ook eigenlijk de enige pagina die de eindgebruikers nodig hebben. Op deze homepage staan de volgende zaken gepresenteerd óf is het direct duidelijk dat en waar zij deze informatie ter beschikking hebben:
+-   een titel
+-   de datum/tijd
+-   uitleg van het gebruik van de app
+-   de weersverwachting (met mogelijkheid een locatie te selecteren/specificeren)
+-   een manier om een Koude Score KS te selecteren/specificeren (standaard en custom waarden)
+-   een advies op basis van de geselecteerde KS
+-   een UI (user interface) om zich te kunnen registreren
+
+### User story; de geregistreerde eindgebruiker
+De toegang tot de app blijft voor alle gebruikers gelijk.
+
+Ten opzichte van de nieuwe gebruiker ziet de geregistreerde gebruiker hetzelfde, met de volgende aspecten/feature toegevoegd:
+-   de naam van de gebruiker
+-   de mogelijkheid om instellingen aan te passen
+-   kunnen selecteren van gepersonaliseerd KS (GKS)
+-   veld om feedback te kunnen geven op de GKS
+
+Deze extra feature is m.b.t. het selecteren/specificeren van de KS. Wanneer een gebruiker geregistreerd is, wordt de extra optie om een gepresonaliseerde KS (GKS) te gebruiken beschikbaar gemaakt voor de eindgebruiker. Daarbij komt een de mogelijkheid om feedback te geven over de GKS. Wanneer feedback is gegeven, wordt de GKS aangepast in de database.
+
+#### Geregistreerde gebruiker op een nieuw systeem
+Wanneer een geregistreerde gebruiker gebruik wilt maken van zijn/haar GKS op een ander/nieuw systeem, moeten ze enkel inloggen met de gegevens waarmee ze geregistreerd zijn. Op basis van deze gegevens wordt de benodigde data en de GKS opgehaald, zodat de eindgebruiker hier gebruik van kan maken. Ook worden de extra velden voor de geregistreerde gebruikers beschikbaar gemaakt in de app.
+
+### User story; de terugkerende eindgebruiker
+De toegang tot de app blijft voor alle gebruikers gelijk.
+
+Bij terugkeer in de app wordt er qua velden hetzelfde gepresenteerd als altijd, met de instellingen als hoe ze het achtergelaten hebben.
 
 ## Features en Requirements
 
