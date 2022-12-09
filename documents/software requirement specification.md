@@ -59,7 +59,7 @@ Bij "binnenkomst" wordt de homepage gepresenteerd. Deze homepage is gelijkertijd
 -   een titel
 -   de datum/tijd
 -   uitleg van het gebruik van de app
--   de weersverwachting (met mogelijkheid een locatie te selecteren/specificeren)
+-   de weersverwachting (met mogelijkheid een locatie te selecteren/specificeren/te bepalen o.b.v. locatie van hun systeem)
 -   een manier om een Koude Score KS te selecteren/specificeren (standaard en custom waarden)
 -   een advies op basis van de geselecteerde KS
 -   een UI (user interface) om zich te kunnen registreren
