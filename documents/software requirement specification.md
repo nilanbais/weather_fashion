@@ -39,9 +39,6 @@ Als cache geheugen ingezet kan worden om dit te bereiken, dan heeft dat de voork
 |Koude Score (KS)|De waarde die wordt bijgehouden om een gepersonaliseerd advies te geven. Een negatieve score indiceert dat iemand het sneller koud heeft dan normaal en een positieve score geeft dat iemand het warmer heeft dan normaal.
 
 
-## Benodigdheden voor eindgebruiker
-Een browser.
-
 ## Aannames en afhankelijkheden
 De webapp wordt gebouwd met de MERN stack en de n-tier architecture pattern.
 
@@ -83,7 +80,7 @@ De toegang tot de app blijft voor alle gebruikers gelijk.
 
 Bij terugkeer in de app wordt er qua velden hetzelfde gepresenteerd als altijd, met de instellingen als hoe ze het achtergelaten hebben.
 
-## Features en Requirements
+## Requirements
 
 ### Functional Requirements
 Hier volgt een lijst met benodigdheden:
@@ -97,12 +94,45 @@ Hier volgt een lijst met benodigdheden:
     -   plek waar weersverwachting wordt gepresenteerd
     -   plek waar het advies wordt gepresenteerd
     -   mogelijkheid om te registreren/inloggen (wss mogelijkheid om door te klikken naar window voor dit)
+    -   bij inloggen, de mogelijkheid om aan te geven of ze ingelogd willen blijven
 -   gebruik kunnen maken van cookies
 -   mogelijkheid voor het geven van feedback wanneer KS van de gebruiker in de database staat
 
+### User Interfaces
+-   front-end software: React Navtive
+-   backend software: Express.js
+-   Database software: MongoDB
+-   netwerkprotocol: HTTPS (?)
 
-### Externe Interface Requirements
+### Hardware Interface
+Web app moet beschikbaar zijn vanuit alle browsers vanaf de volgende systemen:
+-   PC systeem (MacOS, Linux, Windows)
+-   IOS systemem
+-   Android systemen
 
-### Systeem Features
+### Performance requirements
+-   De webapp moet binnen 3 seconde volledig bruikbaar zijn (uitgaande van een goede internetverbinding)
+-   Aanpassingen aan variabelen moeten direct gereflecteerd worden in de velden waar deze invloed op hebben
+-   Bij terugkeer moeten de variabelen waar de eindgebruiker invloed op heeft, hetzelfde zijn als hoe ze deze hebben achtergelaten.
+-   Bij terugkeer moeten de variabelen waar de eindgebruiker geen invloed op heeft, geüpdatet zijn.
 
-### Non-functional Requirements
+### Safety requirements
+-   De GKS in de database moeten redundant opgeslagen worden op een andere locatie, zodat deze data niet verloren gaat.
+-   Elke dag of week moet een backup gemaakt worden van de database. Backups worden voor een week bewaard.
+
+### Security requirememts
+-   De database mag geen volledige gepersonaliseerde gegevens bevatten, los van de GKS en de gekozen naam die wordt gebruikt als groet.
+-   Keys voor het authenitseren van de RestAPI call, moeten veilig en encrypted worden opgeslagen.
+-   Alleen de laag met de Application logica mag connectie maken met de Data Access laag
+-   De implementatie van de database moet zo afgeschermd mogelijk zijn. De database moet alleen gebruikt kunnen worden voor dat waar het voor gebruikt moet worden. Geen open eindpunten.
+
+### Quality requirements
+-   Beschikbaarheid: De beschikbaarheid van de app moet zo hoog mogelijk zijn, maar 100% is daarin geen realistisch doel. Dit blijft vooral een project om te leren, waardoor dat nu de focus heeft.
+-   Correctheid: De app mag nooit gegevens presenteren aan een eindgebruiker waar dit niet voor bestemd is.
+-   Onderhoudbaarheid: De app moet gebruik magen van een geautomatiseerd integratie (niet per se continuous integration) die de app test op haar cruciale aspecten.
+-   Bruikbaarheid: De app moet met minimale uitleg over te interfaces gelijk te gebruiken zijn.
+-   Test dekking: Om toch enige gerantie te kunnen geven m.b.t. de beschikbaarheid van de app, moet de dekking van de test minimaal 80% bedragen. Fomule voor het bepalen van de test dekking:
+
+    ```
+    Test Dekking = aantal geautomatiseerde tests / aantal tests dat uitgevoerd (moet) worden
+    ```
