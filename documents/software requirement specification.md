@@ -36,7 +36,7 @@ Als cache geheugen ingezet kan worden om dit te bereiken, dan heeft dat de voork
 
 |Begrip|Definitie/Toelichting|
 |------|---------------------|
-|Koude Score (KS)|De waarde die wordt bijgehouden om een gepersonaliseerd advies te geven. Een negatieve score indiceert dat iemand het sneller koud heeft dan normaal en een positieve score geeft dat iemand het warmer heeft dan normaal.
+|Kou Score (KS)|De waarde die wordt bijgehouden om een gepersonaliseerd advies te geven. Een negatieve score indiceert dat iemand het snelappler koud heeft dan normaal en een positieve score geeft dat iemand het warmer heeft dan normaal.
 
 
 ## Aannames en afhankelijkheden
@@ -57,7 +57,7 @@ Bij "binnenkomst" wordt de homepage gepresenteerd. Deze homepage is gelijkertijd
 -   de datum/tijd
 -   uitleg van het gebruik van de app
 -   de weersverwachting (met mogelijkheid een locatie te selecteren/specificeren/te bepalen o.b.v. locatie van hun systeem)
--   een manier om een Koude Score KS te selecteren/specificeren (standaard en custom waarden)
+-   een manier om een Kou Score KS te selecteren/specificeren (standaard en custom waarden)
 -   een advies op basis van de geselecteerde KS
 -   een UI (user interface) om zich te kunnen registreren
 
