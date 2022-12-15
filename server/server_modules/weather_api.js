@@ -4,7 +4,7 @@ const APIBaseClass = require("./api/api_base_class")
 
 
 class WeatherAPI extends APIBaseClass {
-
+    // official api docs: https://www.weatherapi.com/docs/ 
     constructor() {
         super("WeatherAPI");
         this.name = "WeatherAPI"
