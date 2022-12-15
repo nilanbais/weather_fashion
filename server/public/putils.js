@@ -19,5 +19,5 @@ async function get_weather_report(input_var) {
 
 async function display_weather_report() {
     let weather_report = await get_weather_report("Rotterdam");
-    document.getElementById('weer').textContent = JSON.stringify(weather_report, 2);
+    document.getElementById('weer').textContent = JSON.stringify(weather_report, null, 2);
 };
