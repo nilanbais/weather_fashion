@@ -56,7 +56,7 @@ class APIBaseClass {
 
     // private method voor authenticatie toevoegen aan header voor de request gedaan wordt
     #authenticate_url(url) {
-        const key = undefined;
+        // const key = undefined;
         let splitted_url = url.split('?');
         let checked_url = splitted_url[0] + `?key=${key}&` + splitted_url[1];
         return checked_url;
