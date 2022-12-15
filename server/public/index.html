@@ -10,14 +10,16 @@
     <body>
         <h1>Test</h1>
         <p ><br />
+            Time:<br /><span id="time"></span>
+        </p>
 
-            Time: <span id="time"></span>
-
+        <p ><br />
+            Weer:<br /><span id="weer"></span>
         </p>
         <script>
             get_time();
             setInterval(get_time, 1000);
-            get_weather_report('test input var');
+            display_weather_report();
         </script>
     </body>
 </html>
