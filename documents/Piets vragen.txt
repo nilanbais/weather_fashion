@@ -4,24 +4,82 @@ Functionaltiteit:
 
 In wat ik nu gelezen heb kan je in een layered system open en closed layers hebben. 
 Vaak zijn ze closed bij wat simpelere projecten, is dat hier ook het geval?
+-----------------------------------------------------------------------------
+Antwoord:
+Ja, elke laag is closed. Het kan wel zo zijn dat we uiteindelijk wel een laag hebben die open is.
+-----------------------------------------------------------------------------
+
 
 Voor mijn visualisatie van de code, is iedere layer zijn eigen folder met iedere component zijn eigen file? 
 Of is dit altijd een vrije keuze en meer een persoonlijke voorkeur?
+-----------------------------------------------------------------------------
+Antwoord:
+De indeling van folders en bestanden is een combinatie van eigen voorkeur en best practices m.b.t. het structuren 
+van de bestanden in zo'n github repo.
+Wat ik het belangrijkste vind is dat de indeling van de folders en bestanden overzichtelijk blijft, zodat het later 
+geen speurtocht wordt om bepaalde stukken code terug te vinden in de repo.
+Voorbeeld:
+	De codes voor het APIAccess component komt allemaal in één folder. In die folder is de code weer verdeeld over 
+	bestanden. Deze bestanden hebben dan code die allemaal verantwoordelijk zijn voor één specifiek onderdeel (denk
+	bijvoorbeeld aan het regelen van authenticatie)
+
+Het komt ook nog best vaak voor dat je halverwege een project zoiets hebt van 'ey wat is dit allemaal een smeringe bende aan 
+het worden', waarna je de gehele folderstructuur van je project/repo opnieuw gaat indelen (refactoring)	
+-----------------------------------------------------------------------------
+
 
 Klopt t dat voor het verkrijgen van de locatie je simpel een code kan kopiëren ergens van t web?
 Aangezien dit door vele apps wordt gedaan. Hetzelfde voor het weer, wind luchtvochtigheid etc.
 Alleen dan is de vraag hoe je de input gaat verwerken met je andere code?
+-----------------------------------------------------------------------------
+Antwoord:
+Het daadwerkelijk ophalen van de locatie is inderdaad geen rocket science wat dat betreft en kan gemakkelijk van 
+een voorbeeld(internet) overgenomen worden.
+De uitdaging is daarbij dan inderdaad hoe je die input weer doorgeeft aan andere functies en wat je code bijv. moet
+doen op het moment dat het de locatie niet kan uitlezen (exception handling).
+-----------------------------------------------------------------------------
+
 
 Dit kon ik niet binnen een kwartier vinden op youtube dus heb ik het nu maar even zo gedaan.
 Maar heb jij nog een filmpie die laat zien hoe je hier in Github nice text documentjes maakt?
+-----------------------------------------------------------------------------
+Antwoord:
+Zoek op: Markdown	noitation
+Elk bestand met als extentie '.md' is zo'n markdown document.
+-----------------------------------------------------------------------------
 
 
 ##User Interface
 -Ik zie + en - staan bij componenten. Mijn gedachte is dat + betekent dat het data omhoog deelt en - andersom.
+-----------------------------------------------------------------------------
+Antwoord:
++ is een publieke functionaliteit (te gebruiken door andere objecten)
+- is een private functionaliteit (alleen door zichzelf te gebruiken)
+Voor die modellen probeer ik zo dicht mogelijk bij UML (Unified Modeling Language) te blijven. UML of een eigen interpetatie ervan
+wordt veel gebruikt in het modelleren van software. (ik ben ook niet foutloos met UML)
+onderstaande link is een verzameling van allemaal video's waarin steef zijn oom het allemaal wel duidelijk uitlegt.
+https://www.youtube.com/playlist?list=PLWPirh4EWFpF9Gbnu4_DdF4ITHSN6MSsk
+-----------------------------------------------------------------------------
+
 
 -In de UI zie ik 2x een get_location staan verdeeld over 2 componenten. Hoe zit dat?
+-----------------------------------------------------------------------------
+Antwoord:
+Dat is volgens mij gewoon een dubbeling. Scherp van je.
+Die in WebappFrontend was eerst de enige, maar deze functie wil in afsplitsen en in een class zetten.
+Nu kan het zijn dat je denk; "Hoezo dat dan bais?" Nou, om het volgende:
+	De locatie is meest nauwkeurig uit te lezen op basis van coördinaten (latitude en longtitude), maar dit is voor
+	mensenogen moeilijk te begrijpen. Een class UserLocation heeft een variabelen voor de coördinaten die zijn/worden uitgelezen,
+	maar bevatten ook methods (method: functie van/in een class-object) die deze coördinaten kunnen omvormen naar een land/stad.
+	Zo hebben we alle functionaliteit met betrekking tot het uitlezen en transformeren (leesbaar maken) van de data op één plek in 
+	één object.
+-----------------------------------------------------------------------------
+
 
 ##Applicatie Logica Laag
 -Bij het de componenten staat aan het eind bijv. :array. Bijvoorbeeld bij de AdviceGenerator staat +get_personalized_advice(KS):array.
 Betekent dit dat het advies dat gegeven wordt in een array verstuurd wordt naar boven of dat de info om tot dit advies te komen in een array wordt gepresenteerd zodat er vervolgens met een tekst(object denk) advies kan worden gegeven.
-
+-----------------------------------------------------------------------------
+Antwoord:
+Dit is weer een UML dingetje. alles achter de ':' geeft aan wat het datatype is/moet zijn dat je terug krijgt van de functie/method.
+-----------------------------------------------------------------------------
