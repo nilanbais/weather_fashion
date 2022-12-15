@@ -1,6 +1,6 @@
 
 // custom
-const APIBaseClass = require("./api_base_class")
+const APIBaseClass = require("./api/api_base_class")
 
 
 class WeatherAPI extends APIBaseClass {
