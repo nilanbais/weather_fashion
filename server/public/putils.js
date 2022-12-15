@@ -4,16 +4,20 @@ function get_time() {
 }
 
 async function get_weather_report(input_var) {
-    console.log(input_var);
+    // input moet stad of lat,long zijn
     const request_options = {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'query_parameter': JSON.stringify(input_var)
+            'location': input_var
         }
     };
-    const server_response = await fetch('/weather_report', request_options);
+    const server_response = await fetch('/current_weather', request_options);
     const response_json = await server_response.json();
-    console.log("server_response from putils");
-    console.log(response_json);
+    return response_json
+};
+
+async function display_weather_report() {
+    let weather_report = await get_weather_report("Rotterdam");
+    document.getElementById('weer').textContent = JSON.stringify(weather_report, 2);
 };
