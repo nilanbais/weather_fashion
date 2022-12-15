@@ -1,6 +1,9 @@
 const express = require("express");
 const WeatherAPI = require("./server_modules/weather_api");
 
+require('dotenv').config();
+console.log(process.env);
+
 const server = express();
 server.listen(3000, () => console.log("Listening at port 3000"));
 server.use(express.static('public'));
