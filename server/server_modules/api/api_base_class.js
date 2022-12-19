@@ -29,7 +29,7 @@ class APIBaseClass {
     };
     set name(value){
         this.#name = value;
-    }
+    };
 
     // properties 
     get header() {
