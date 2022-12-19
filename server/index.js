@@ -3,6 +3,7 @@ const express = require("express");
 // custom
 const WeatherAPI = require("./server_modules/weather_api");
 const MongoDBConnection = require("./server_modules/database/database_connection");
+const WeatherFashionDB = require("./server_modules/database/database_cursor");
 
 // load env vars
 require('dotenv').config();
@@ -28,6 +29,6 @@ server.get('/current_weather', async(request, response) => {
 });
 
 server.get('/test_db', async(request, response) => {
-    let db = new MongoDBConnection();
-    db.test().catch(console.dir);
+    let db = new WeatherFashionDB();
+    db.test_db_connection().catch(console.dir);
 });
