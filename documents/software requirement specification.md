@@ -1,7 +1,6 @@
 # Software Requirements Specification
 Dit document bevat de software requirements van de op te leveren web applicatie.
 
-
 ## Doel
 We twijfelen allemaal wel eens over of we onszelf warm genoeg hebben aangekleed óf dat dat wat we aan hebben getrokken juist niet te warm is. In beide scenario's helemaal kut. Wat je kan doen om wat twijfel bij jezelf weg te nemen, is naar buiten kijken en kijken wat andere mensen die dag hebben aangetrokken. Dus stel, je doet dat, kijkt naar buiten en ziet vervolgens een gozer in een korte broek en kort daarna iemand met een winterjas; als nog niet wijzer geworden.
 
@@ -11,6 +10,9 @@ Het gaat hier echter niet om de style van de outfit en of de schoenen wel bij de
 
 ## Doelgroep
 De doelgroep voor deze software is iedereen, of een ieder die advies nodig heeft m.b.t hun outfit in de transitiemaanden tussen de seizoenen. 
+
+## Soortgelijke projecten
+[Warmetruiendag app](https://appadvice.com/app/warmetruiendag-clo/1205192774) is een app die hetzelfde doel vervult als Weeather Fashion. Echter is deze app niet meer beschikbaar voor gebruik. Dit geeft ons genoeg motivatie om alsnog door te gaan met de ontwikkeling van Weather Fashion. Daarbij kan de link worden gebruikt om inspiratie op te doen over gebruik en vormgeving van de app.
 
 ## Gebruik
 De software wordt eerste instantie aangeboden als web applicatie (webapp). Wanneer iemand het advies nodig heeft, navigeren ze het systeem naar keuze naar de webapp en lezen het advies dat ze wordt aangeboden.
