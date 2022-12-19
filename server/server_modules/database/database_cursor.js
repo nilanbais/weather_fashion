@@ -1,14 +1,5 @@
-
-const MongoDB = require("./database_connection");
-
-
-class WeatherFashionDB {
-    #database = new MongoDB();
-
-    async test_db_connection() {
-        console.log("Testing connection from WeatherFashionDB class");
-        this.#database.test();
-    };
-};
-
-module.exports = WeatherFashionDB;
+// database cursor moet de stap zijn waarin een query wordt
+// opgebouwd op basis van input parameters.
+// 
+// moet een extentie van of brug naar de connectie object
+// worden.

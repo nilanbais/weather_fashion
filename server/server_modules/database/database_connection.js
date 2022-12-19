@@ -1,7 +1,7 @@
 
 const {MongoClient, ServerApiVersion} = require("mongodb");
 
-class MongoDB {
+class MongoDBConnection {
 
     #base_uri = 'mongodb+srv://<USER>:<PASSWORD>@wf1.0km9jml.mongodb.net/?retryWrites=true&w=majority;'
     #client = undefined;
@@ -40,4 +40,4 @@ class MongoDB {
     };
 };
 
-module.exports = MongoDB;
+module.exports = MongoDBConnection;

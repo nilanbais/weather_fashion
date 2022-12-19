@@ -3,7 +3,7 @@ const express = require("express");
 // custom
 const WeatherAPI = require("./server_modules/weather_api");
 const MongoDBConnection = require("./server_modules/database/database_connection");
-const WeatherFashionDB = require("./server_modules/database/database_cursor");
+const WeatherFashionDB = require("./server_modules/weather_fashion_db");
 
 // load env vars
 require('dotenv').config();
