@@ -1,7 +1,7 @@
 function get_time() {
     let current_time = new Date().toTimeString();
     document.getElementById('time').textContent = current_time;
-}
+};
 
 async function get_weather_report(input_var) {
     // input moet stad of lat,long zijn
