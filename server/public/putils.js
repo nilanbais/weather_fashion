@@ -21,3 +21,15 @@ async function display_weather_report() {
     let weather_report = await get_weather_report("Rotterdam");
     document.getElementById('weer').textContent = JSON.stringify(weather_report, null, 2);
 };
+
+async function test_db_connection() {
+    const request_options = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+    const server_response = await fetch('/test_db', request_options);
+    const response_json = await server_response.json();
+    return response_json
+};

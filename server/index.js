@@ -1,8 +1,13 @@
 const express = require("express");
-const WeatherAPI = require("./server_modules/weather_api");
 
+// custom
+const WeatherAPI = require("./server_modules/weather_api");
+const MongoDBConnection = require("./server_modules/database/database_connection");
+
+// load env vars
 require('dotenv').config();
 console.log(process.env);
+
 
 const server = express();
 server.listen(3000, () => console.log("Listening at port 3000"));
@@ -20,4 +25,9 @@ server.get('/current_weather', async(request, response) => {
 
     console.log(`sending data = ${JSON.stringify(data)}`);
     response.json(data);
+});
+
+server.get('/test_db', async(request, response) => {
+    let db = new MongoDBConnection();
+    db.test().catch(console.dir);
 });
