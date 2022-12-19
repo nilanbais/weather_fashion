@@ -7,7 +7,6 @@ class WeatherAPI extends APIBaseClass {
     // official api docs: https://www.weatherapi.com/docs/ 
     constructor() {
         super("WeatherAPI");
-        this.name = "WeatherAPI"
     };
 
     async get_current_weather(location) {

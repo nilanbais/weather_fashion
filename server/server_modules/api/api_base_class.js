@@ -8,19 +8,28 @@ const base_urls = require("./api_base_url");
 
 class APIBaseClass {
     // private attributes
+    #name = undefined;
     #url = undefined;   
     #method = undefined;
     #header = undefined;
     #body = undefined;
 
     constructor(name_implemented_api) {
-        this.base_url = this.#get_base_url(name_implemented_api);
+        this.name = name_implemented_api;
+        this.base_url = this.#get_base_url();
     };
 
     // private method voor base urls ophalen
-    #get_base_url(api_name) {
-        return base_urls[api_name];
+    #get_base_url() {
+        return base_urls[this.name];
     };
+
+    get name() {
+        return this.#name;
+    };
+    set name(value){
+        this.#name = value;
+    }
 
     // properties 
     get header() {
