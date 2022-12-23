@@ -10,18 +10,30 @@
     <body>
         <h1>Test</h1>
         <p ><br />
-            Time:<br /><span id="time"></span>
+            Time pieter koorn:<br /><span id="time"></span>
         </p>
 
         <p ><br />
             Weer:<br /><span id="weer"></span>
         </p>
         <script>
-            get_time();
-            setInterval(get_time, 1000);
-            display_weather_report();
+            display_time();
+            setInterval(display_time, 1000);
+            display_weather_report("Rotterdam");
 
-            test_db_connection();
+            // test_db_connection();
+
+            function delAllCookies() {
+                let all_cookies = document.cookie.split(';');
+                // The "expire" attribute of every cookie is 
+                // Set to "Thu, 01 Jan 1970 00:00:00 GMT"
+                for (var i = 0; i < all_cookies.length; i++)
+                    document.cookie = all_cookies[i] + "=;expires=" + new Date(0).toUTCString();
+            };
+
+            // delAllCookies();
+            // console.log(document.cookie);
+
         </script>
     </body>
 </html>

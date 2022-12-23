@@ -1,4 +1,6 @@
+// npm
 const express = require("express");
+const cookieParser = require("cookie-parser");
 
 // custom
 const WeatherAPI = require("./server_modules/weather_api");
@@ -6,24 +8,27 @@ const WeatherFashionDB = require("./server_modules/weather_fashion_db");
 
 // load env vars
 require('dotenv').config();
-console.log(process.env);
 
-
+// create and config server
 const server = express();
-server.listen(3000, () => console.log("Listening at port 3000"));
+
+server.use(cookieParser());
 server.use(express.static('public'));
 server.use(express.json({ limit: '1mb'}));
+
+server.listen(3000, () => console.log("Listening at port 3000"));
 
 
 // eindpunt voor weersverwachting
 server.get('/current_weather', async(request, response) => {
-    let location = JSON.stringify(request.get('location'));
+    let query_params = request.query;
+    console.log(`query_params in current_weather endpoint:`);
+    console.log(query_params);
 
     let wapi = new WeatherAPI();
 
-    let data = await wapi.get_current_weather(location);
+    let data = await wapi.get_current_weather(query_params.location);
 
-    console.log(`sending data = ${JSON.stringify(data)}`);
     response.json(data);
 });
 

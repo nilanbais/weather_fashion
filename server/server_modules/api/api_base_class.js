@@ -58,6 +58,8 @@ class APIBaseClass {
         let url = this.base_url + api_endpoint;
         let new_url = this.#add_header_to_url(url);
 
+        console.log(`api url in api base class = ${new_url}`);
+
         const response = await fetch(this.#authenticate_url(new_url));
         const response_json = await response.json();
 

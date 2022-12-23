@@ -15,7 +15,8 @@ class WeatherAPI extends APIBaseClass {
         this.header = {
             q: location
         };
-
+        console.log(`header in weatherapi:`);
+        console.log(this.header);
         let result = await this.get_response(api_endpoint);
         return result;
     };
