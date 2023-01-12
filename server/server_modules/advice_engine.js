@@ -30,7 +30,7 @@ class AdviceEngine {
 
         // Variabelen uit input data package toewijzen naar lokale variabelen
         let metabolism = this.#check_value(input_data.metabolism, 'btw', (51, 400));
-        let walking_speed = this.#check_value(input_data.walking_speed, 'btw', ((0.0052*(metabolism-58)), 1.2));
+        let walking_speed = this.#check_value(input_data.walking_speed, 'btw', ((0.0052 * (metabolism - 58)), 1.2));
         let air_temperature = this.#check_value(input_data.temperature_air, 'gte', 10);
         let wind_speed = this.#check_value(input_data.wind_speed, 'btw', (0.4, 18));
         let radiation_temperature = input_data.radiation_temperature;  // temperatuur van de zon?
