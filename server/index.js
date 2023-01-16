@@ -10,13 +10,14 @@ const WeatherFashionDB = require("./server_modules/weather_fashion_db");
 require('dotenv').config();
 
 // create and config server
+const port = process.env.PORT || 3000;
 const server = express();
 
 server.use(cookieParser());
 server.use(express.static('public'));
 server.use(express.json({ limit: '1mb'}));
 
-server.listen(3000, () => console.log("Listening at port 3000"));
+server.listen(port, () => console.log(`Listening at port ${port}`));
 
 
 // eindpunt voor weersverwachting
