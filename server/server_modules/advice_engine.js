@@ -215,3 +215,5 @@ class AdviceEngine {
         return variable;  // is only executes when the if-statement in the switch case isn't hit
     };
 };
+
+module.exports = AdviceEngine;
