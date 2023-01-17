@@ -1,6 +1,7 @@
 // npm
 const express = require("express");
 const cookieParser = require("cookie-parser");
+const session = require("express-session");
 
 // custom
 const WeatherAPI = require("./server_modules/weather_api");
@@ -37,4 +38,9 @@ server.get('/current_weather', async(request, response) => {
 server.get('/test_db', async(request, response) => {
     let db = new WeatherFashionDB();
     db.test_db_connection().catch(console.dir);
+});
+
+server.get('/test_form', (request, response) => {
+    console.log(request.query);
+    RedirectToAction('/');
 });
