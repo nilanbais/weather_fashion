@@ -43,7 +43,7 @@ server.get('/current_weather', async(request, response) => {
 
         data = await weather_api.get_current_weather(query_params.location);
         // setting the data as cookie in the response
-        // cookie needs to expire at the start of a new day or at end of the session { expires: 0} === session cookie
+        // cookie needs to expire at the start of a new day or at end of the session { expires: 0 } === session cookie
         response.cookie("weather_report", data, { expires: 0});  
     };
     // sending the data
