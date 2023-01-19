@@ -17,7 +17,6 @@ function add_params_to_url(base, params) {
 
 async function get_weather_report(user_location) {
     
-    console.log("Hello, I'm not checking cookies, but I'm requesting new data right away. Thank you");
     const server_endpoint = '/current_weather';
     const query_parameter = {
         location: user_location  // input moet stad of lat,long zijn
@@ -27,9 +26,8 @@ async function get_weather_report(user_location) {
 
     const server_response = await fetch(request_url);
     const response_json = await server_response.json();
-    return response_json
+    return response_json;
 };
-
 
 async function test_db_connection() {
     const request_options = {
@@ -39,8 +37,7 @@ async function test_db_connection() {
         }
     };
     const server_response = await fetch('/test_db', request_options);
-    const response_json = await server_response.json();
-    return response_json
+    console.log(`document cookies: ${document.cookie}`)
 };
 
 // functions to display data
