@@ -2,12 +2,12 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const credentials = require("./conf");
-const session = require("express-session");
 
 // custom
-const { validate_cookie_presence } = require("./server_modules/cookie_functions")
+const { validate_cookie_presence, check_cookie_value } = require("./server_modules/cookie_functions")
 const WeatherAPI = require("./server_modules/weather_api");
 const WeatherFashionDB = require("./server_modules/weather_fashion_db");
+const AdviceEngine = require("./server_modules/advice_engine")
 
 // load env vars
 require('dotenv').config();
@@ -28,27 +28,49 @@ server.get('/current_weather', async(request, response) => {
 
     let data;
     let cookie_name = 'weather_report';
+    let location_cookie_name = cookie_name + "_location";
+
+    let query_params = request.query;
+
     console.log(`Cookie with name '${cookie_name}' is present in received cookies: ${validate_cookie_presence(request, cookie_name)}`);
 
-    if (validate_cookie_presence(request, cookie_name)) {
+    // validate if a weather report is present in the cookies and check if the location is still the same as the last request
+    if (validate_cookie_presence(request, cookie_name) && check_cookie_value(request, location_cookie_name, query_params.location)) {
         // retreving data from cookies
         data = request.cookies[cookie_name];
     } else {
-        let query_params = request.query;
-
         console.log(`query_params in current_weather endpoint:`);
         console.log(query_params);
 
         let weather_api = new WeatherAPI();
 
         data = await weather_api.get_current_weather(query_params.location);
+
         // setting the data as cookie in the response
         // cookie needs to expire at the start of a new day or at end of the session { expires: 0 } === session cookie
-        response.cookie("weather_report", data, { expires: 0});  
+        response.cookie(cookie_name, data, { expires: 0 });
+        response.cookie(location_cookie_name, query_params.location, { expires: 0 })
     };
     // sending the data
     response.send(data);
 });
+
+// eindpunt voor het verkrijgen van een ireq waarde
+server.get('/calc_ireq',(request, response) => {
+    let query_params = request.query;
+    console.log(query_params);
+    let advice_engine = new AdviceEngine(query_params);
+    let ireq_values = advice_engine.test_calc_IREQ();
+    console.log("calculated ireq value:");
+    console.log(ireq_values);
+    response.send(ireq_values);
+});
+
+// eindpunt voor instellen van de persoonsdata (lengte, gewicht, etc.)
+server.post('/set_ireq_input_parameters', (request, response) => {
+    let input; 
+});
+
 
 // algemene test functies
 server.get('/test_db', async(request, response) => {
