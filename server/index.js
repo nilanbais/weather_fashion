@@ -63,7 +63,11 @@ server.get('/calc_ireq',(request, response) => {
     let ireq_values = advice_engine.test_calc_IREQ();
     console.log("calculated ireq value:");
     console.log(ireq_values);
-    response.send(ireq_values);
+    const payload = {
+        IREQ_min: ireq_values[0],
+        IREQ_neutral: ireq_values[1]
+    }
+    response.send(payload);
 });
 
 // eindpunt voor instellen van de persoonsdata (lengte, gewicht, etc.)
