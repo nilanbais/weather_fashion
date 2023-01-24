@@ -105,9 +105,9 @@ async function test_display_weather_report(location) {
 
 
 async function test_display_ireq_values(location) {
-    let default_ireq_male = get_ireq_value(location, 175, 70, 30, 'm');
-    let default_ireq_female = get_ireq_value(location, 170, 60, 30, 'v');
+    let default_ireq_male = await get_ireq_value(location, 175, 70, 30, 'm');
+    let default_ireq_female = await get_ireq_value(location, 170, 60, 30, 'v');
 
-    document.getElementById("ireq_m").textContent = default_ireq_male;
-    document.getElementById("ireq_v").textContent = default_ireq_female;
+    document.getElementById("ireq_m").textContent = JSON.stringify(default_ireq_male, null, 2);
+    document.getElementById("ireq_v").textContent = JSON.stringify(default_ireq_female, null, 2);
 }
