@@ -60,7 +60,7 @@ server.get('/calc_ireq',(request, response) => {
     let query_params = request.query;
     console.log(query_params);
     let advice_engine = new AdviceEngine(query_params);
-    let ireq_values = advice_engine.test_calc_IREQ();
+    let ireq_values = advice_engine.calculate_IREQ();
     console.log("calculated ireq value:");
     console.log(ireq_values);
     const payload = {

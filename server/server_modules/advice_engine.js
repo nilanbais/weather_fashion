@@ -119,7 +119,7 @@ class AdviceEngine {
         };
     };
 
-    test_calc_IREQ() {
+    calculate_IREQ() {
         // test function that builds the input package and executes the calc_IREQ method.
         let metabolism = this.get_metabolism(this.#input_data_package.activity);
         let walking_speed = this.get_walking_speed(this.#input_data_package.activity);
@@ -130,7 +130,7 @@ class AdviceEngine {
         // execute calculation
         console.log("calculating ireq with following data");
         console.log(metabolism, walking_speed, air_temperature, wind_speed, parseFloat(radiation_temperature), parseFloat(humidity));
-        
+
         this.#calc_IREQ(metabolism, walking_speed, air_temperature, wind_speed, parseFloat(radiation_temperature), parseFloat(humidity));
         return this.IREQ;  // returns a tuple [ IREQ_minimal, IREQ_neutral ]
     };
