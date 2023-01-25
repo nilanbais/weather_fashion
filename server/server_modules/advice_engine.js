@@ -57,16 +57,16 @@ class AdviceEngine {
             weight in kg
             sex has default value 'm'
         */
-        let cal_day;
+        let cal_day, cal_hour;
         switch(sex.toLowerCase()) {
             case 'm':
                 cal_day = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
             case 'v':
                 cal_day = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
        };
-       let kcal_hour = (cal_day * Math.pow(10, -3)) / 24; // calories_per_day * 10^-3 to traform to kcalories_per_day
-       console.log(`Kcal per hour basal metabolism = ${kcal_hour}`);
-       return kcal_hour;
+       cal_hour = cal_day / 24;
+       console.log(`Calories per hour basal metabolism = ${cal_hour}`);
+       return cal_hour;
     };
 
     #calc_metabolism(kcal_hour, length, weight) {
@@ -128,6 +128,9 @@ class AdviceEngine {
         let radiation_temperature = this.#input_data_package.radiation_temperature;
         let humidity = this.#input_data_package.humidity;
         // execute calculation
+        console.log("calculating ireq with following data");
+        console.log(metabolism, walking_speed, air_temperature, wind_speed, parseFloat(radiation_temperature), parseFloat(humidity));
+        
         this.#calc_IREQ(metabolism, walking_speed, air_temperature, wind_speed, parseFloat(radiation_temperature), parseFloat(humidity));
         return this.IREQ;  // returns a tuple [ IREQ_minimal, IREQ_neutral ]
     };
