@@ -1,3 +1,4 @@
 node_modules
-*.env
-env_files
+dist
+*.log
+.DS_Store
